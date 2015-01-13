@@ -18,8 +18,8 @@ DOCKER_DAEMON=docker run -d -h $(HOSTNAME)
 
 default:
 	@echo make build: build docker containers
-	@echo make run: run docker containers
 	@echo make certificate: generate self-signed SSL certificate
+	@echo make run: run docker containers
 	@echo ---
 	@echo make start/stop/kill/rm
 
@@ -44,12 +44,13 @@ data_init:
 	mkdir -p $(SOLR_DATA)/peps_mail $(SOLR_DATA)/peps_file $(SOLR_DATA)/peps_user $(SOLR_DATA)/peps_contact
 	mkdir -p $(EXIMOUT_DATA) $(EXIMIN_DATA)
 	mkdir -p $(MONGO_DATA)
+	mkdir -p $(PEPS_DATA)
 
-run: data_init
+run: data_init install_cert
 	$(DOCKER_DAEMON) --name peps_mongod -v $(MONGO_DATA):/data/db:rw mongod
 	$(DOCKER_DAEMON) --name peps_exim_out -v $(EXIMOUT_DATA):/exim_data:rw exim
 	$(DOCKER_DAEMON) --name peps_solr -v $(SOLR_DATA):/solr_data:rw solr
-	$(DOCKER_DAEMON) --name peps_server -p $(HTTPS_PORT):$(HTTPS_PORT) -v $(DATA):$(DATA):ro --link=peps_mongod:mongod --link=peps_solr:solr --link=peps_exim_out:exim peps
+	$(DOCKER_DAEMON) --name peps_server -p $(HTTPS_PORT):$(HTTPS_PORT) -v $(PEPS_DATA):/data:ro --link=peps_mongod:mongod --link=peps_solr:solr --link=peps_exim_out:exim peps
 	$(DOCKER_DAEMON) --name peps_exim_in -p $(SMTP_PORT):$(SMTP_PORT) -v $(EXIMIN_DATA):/exim_data:rw --link peps_server:peps exim
 
 start:
