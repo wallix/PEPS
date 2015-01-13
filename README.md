@@ -1,4 +1,71 @@
 PEPS
 ====
 
-Modern Webmail Server
+Innovative email and collaboration server.
+
+# Why PEPS?
+
+PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox.
+
+Please read more [about PEPS](http://github.com/MLstate/PEPS/wiki/About) and its [roadmap](http://github.com/MLstate/PEPS/wiki/Roadmap). We also have a [FAQ](http://github.com/MLstate/PEPS/wiki/FAQ).
+
+# Installation guide
+
+The deployment of PEPS is using [Docker](http://docker.io) to simplify the installation process.
+This quick guide covers the deployment of a single server, which you should have up and running in 30 minutes.
+
+## Docker containers
+
+First install Docker on your server. If you are new to Docker, you can use Docker-ready linux instances at [DigitalOcean](http://digitalocean.com) or similar services.
+
+To build the Docker containers and run on a Docker instance, just type:
+
+```sh
+git clone https://github.com/MLstate/PEPS
+cd PEPS
+make build
+make run
+```
+
+To stop and remove them, you can use:
+
+```sh
+make stop
+make rm
+```
+
+## System Configuration
+
+PEPS runs by default using HTTPS.
+The only major pre-requisites are that you should have installed
+server.crt and server.key in the `$(PEPS_DATA)` directory (by default `/data/peps`).
+If you want to start quickly with a self-signed certificate, type:
+
+```sh
+make certificate
+make install_cert
+```
+
+or copy your domain certificates to `$(PEPS_DATA)` manually before running the containers with `make run`.
+
+<!--  and you
+should initialise the $(EXIMIN_DATA) and $(EXIMOUT_DATA) directories
+with the exim configuration files.
+ -->
+
+## PEPS Configuration
+
+You should now be able to run the PEPS server and connect to it, you then need to:
+
+1. Log in as "admin" user with the "admin" password
+2. Go to the administration tab (wheels icon)
+3. Change domain name, and activate license by clicking on "Activate"
+4. Create users, teams, etc.
+
+# Documentation
+
+Manuals for both users and admins are available in form of the PEPS wiki:
+
+- [User Manual](http://github.com/MLstate/PEPS/wiki/User-Manual)
+- [Admin Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
+
