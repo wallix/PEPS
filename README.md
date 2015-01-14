@@ -16,7 +16,7 @@ This quick guide covers the deployment of a single server, which you should have
 
 ## Docker containers
 
-First install Docker on your server. If you are new to Docker, you can use Docker-ready linux instances at [DigitalOcean](http://digitalocean.com) or similar services.
+First install Docker on your server. If you are new to Docker, you can use Docker-ready linux instances at [DigitalOcean](http://digitalocean.com) or similar services. We recommend to have at least 2 Gb RAM in your PEPS instance.
 
 To build the Docker containers and run on a Docker instance, just type:
 
@@ -24,13 +24,15 @@ To build the Docker containers and run on a Docker instance, just type:
 git clone https://github.com/MLstate/PEPS
 cd PEPS
 make build
+make certificate # or install existing certificates
 make run
 ```
 
-To stop and remove them, you can use:
+To later stop, start and remove containers, you can use:
 
 ```sh
 make stop
+make start
 make rm
 ```
 
