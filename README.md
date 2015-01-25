@@ -1,11 +1,11 @@
-PEPS
+PEPS = Email for Teams
 ====
 
-Innovative email and collaboration server.
+Innovative email and collaboration server with unique social features.
 
 # Why PEPS?
 
-PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox.
+PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox, and innovate with new features.
 
 Please read more [about PEPS](http://github.com/MLstate/PEPS/wiki/About) and its [roadmap](http://github.com/MLstate/PEPS/wiki/Roadmap). We also have a [FAQ](http://github.com/MLstate/PEPS/wiki/FAQ).
 
@@ -71,3 +71,6 @@ Manuals for both users and admins are available in form of the PEPS wiki:
 - [User Manual](http://github.com/MLstate/PEPS/wiki/User-Manual)
 - [Admin Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
 
+# Contact
+
+You can reach out directly to [henri at opalang dot org](mailto:henri_at_opalang_org) for any questions.
