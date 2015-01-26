@@ -70,6 +70,7 @@ Manuals for both users and admins are available in form of the PEPS wiki:
 
 - [User Manual](http://github.com/MLstate/PEPS/wiki/User-Manual)
 - [Admin Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
+- [Developer Manual](http://github.com/MLstate/PEPS/wiki/Developer-Manual)
 
 # Contact
 
