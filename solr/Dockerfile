@@ -1,9 +1,9 @@
 # Solr container
 
-# This image is a trusted build but its Docker file
-# is currently in ../make_solr if you want to rebuild it.
-# It's quite big...
+# This container does not use baseimage yet
 FROM makuk66/docker-solr:latest
+
+MAINTAINER MLstate <contact@mlstate.com>
 
 # Install stuff we need
 RUN apt-get update && apt-get install -y \

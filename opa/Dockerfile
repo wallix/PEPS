@@ -1,6 +1,8 @@
 # Generic Opa container
 
-FROM ubuntu:latest
+FROM phusion/baseimage:0.9.16
+
+MAINTAINER MLstate <contact@mlstate.com>
 
 # Install stuff we need
 RUN apt-get update && apt-get install -y \
