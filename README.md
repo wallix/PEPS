@@ -21,10 +21,19 @@ First install Docker on your server. If you are new to Docker, you can use Docke
 To build the Docker containers and run on a Docker instance, just type:
 
 ```sh
+# Just in case, install make
+apt-get install make
+# Clone the repository
 git clone https://github.com/MLstate/PEPS
 cd PEPS
+
+# Configure your domain name
+echo YOUR_DOMAIN_NAME > domain
+
+# Build the containers
 make build
-make certificate # or install existing certificates
+make certificate # or install existing certificates server.key and server.crt
+# Run the containers
 make run
 ```
 
