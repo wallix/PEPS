@@ -37,6 +37,7 @@ exports.register = function () {
                     } else { throw new Error('could not get domain from ' + host); }
                 }
             );
+        }
     } else { throw new Error('configuration file missing') }
 };
 
