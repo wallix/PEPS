@@ -13,6 +13,9 @@ RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -q install nodejs
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Mount /etc/peps for TLS certificates
+VOLUME ["/etc/peps"]
+
 # Install Haraka
 RUN npm install -g Haraka
 RUN haraka -i /usr/local/haraka

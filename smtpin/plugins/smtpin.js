@@ -24,7 +24,7 @@ var request = require('request');
 var host, domain;
 
 exports.register = function () {
-    var config = this.config.get('/etc/peps/smtpin.ini');
+    var config = this.config.get('/usr/local/haraka/config/smtpin.ini');
     if (config.main.host) {
         // TODO: IPv6
         var match = /^([^: ]+)(?::(\d+))?$/.exec(config.main.host);
