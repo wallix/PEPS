@@ -30,7 +30,7 @@ exports.register = function () {
         var match = /^([^: ]+)(?::(\d+))?$/.exec(config.main.host);
         if (match) {
             host = config.main.host;
-            request(host + '/domain',
+            request('http://' + host + '/domain',
                 function (error, response, body) {
                     if (!error && response.statusCode == 200) {
                         domain = check_domain(host);
