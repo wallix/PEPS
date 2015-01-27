@@ -33,7 +33,7 @@ exports.register = function () {
             request('http://' + host + '/domain',
                 function (error, response, body) {
                     if (!error && response.statusCode == 200) {
-                        domain = check_domain(host);
+                        domain = body;
                     } else { throw new Error('could not get domain from ' + host); }
                 }
             );
@@ -51,7 +51,7 @@ exports.hook_data_post = function (next, connection) {
     var transaction = connection.transaction;
     // TODO: check that recipients (transaction.rcpt_to) domain name?
     var options = {
-        'uri': host,
+        'uri': 'http://' + host,
         'headers': {
             'Content-Type': 'text/plain; charset=utf-8'
         },
