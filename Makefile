@@ -11,6 +11,7 @@ PEPS_ETC=/etc/peps
 HTTPS_PORT?=443
 SMTP_PORT?=25
 SMTPS_PORT?=587
+SMTPSBIS_PORT?=465
 
 # Handy if you need --no-cache=true
 DOCKER_BUILD_OPTS?=
@@ -50,13 +51,14 @@ data_init:
 	mkdir -p $(SOLR_DATA)/peps_mail $(SOLR_DATA)/peps_file $(SOLR_DATA)/peps_user $(SOLR_DATA)/peps_contact
 	mkdir -p $(MONGO_DATA)
 	mkdir -p $(PEPS_ETC)
+	cp domain $(PEPS_ETC)
 
 run: data_init install_cert
 	$(DOCKER_DAEMON) --name peps_mongod -v $(MONGO_DATA):/data/db:rw mongod
 	$(DOCKER_DAEMON) --name peps_solr -v $(SOLR_DATA):/solr_data:rw solr
 	$(DOCKER_DAEMON) --name peps_server -p $(HTTPS_PORT):$(HTTPS_PORT) -v $(PEPS_ETC):/etc/peps:ro --link=peps_mongod:mongod --link=peps_solr:solr peps
-	$(DOCKER_DAEMON) --name peps_smtpin -p $(SMTP_PORT):$(SMTP_PORT) --link peps_server:peps smtpin
-	$(DOCKER_DAEMON) --name peps_smtpout -p $(SMTPS_PORT):$(SMTPS_PORT) --link peps_server:peps smtpout
+	$(DOCKER_DAEMON) --name peps_smtpin -p $(SMTP_PORT):$(SMTP_PORT) -p $(SMTPS_PORT):$(SMTPS_PORT) --link peps_server:peps smtpin
+	$(DOCKER_DAEMON) --name peps_smtpout -p $(SMTPSBIS_PORT):$(SMTPSBIS_PORT) --link peps_server:peps smtpout
 	@echo Now open your browser and log in to https://$(HOSTNAME) to set up the admin password
 
 start:

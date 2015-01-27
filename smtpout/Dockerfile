@@ -24,7 +24,7 @@ RUN cd /usr/local/haraka && npm install
 RUN mkdir /etc/service/haraka
 ADD haraka.sh /etc/service/haraka/run
 
-EXPOSE 25
+EXPOSE 465
 
 # Start the init daemon - runit will launch the Haraka process
 CMD ["/sbin/my_init"]

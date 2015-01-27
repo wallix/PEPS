@@ -21,8 +21,9 @@ RUN haraka -i /usr/local/haraka
 ADD ./domain /usr/local/haraka/config/host_list
 # Configure plugins
 ADD ./config/plugins /usr/local/haraka/config/
-# CHECK: really?
+# CHECK: required?
 ADD ./config/plugins/package.json /usr/local/haraka/package.json
+ADD ./config/smtp.ini /usr/local/haraka/
 RUN cd /usr/local/haraka && npm install
 
 # Create haraka runit service
@@ -30,6 +31,8 @@ RUN mkdir /etc/service/haraka
 ADD haraka.sh /etc/service/haraka/run
 
 EXPOSE 25
+# TODO: key + dual port
+EXPOSE 587
 
 # Start the init daemon - runit will launch the Haraka process
 CMD ["/sbin/my_init"]
