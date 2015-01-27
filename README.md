@@ -3,6 +3,12 @@ PEPS = Email for Teams
 
 Innovative email and collaboration server with unique social features.
 
+![Messages View](https://cloud.githubusercontent.com/assets/817369/5923743/09105572-a656-11e4-9305-eb2a2bc578ce.png)
+
+![Dashboard View](https://cloud.githubusercontent.com/assets/817369/5923753/1a5dfd20-a656-11e4-959f-f19d9df12c0e.png)
+
+![Files View](https://cloud.githubusercontent.com/assets/817369/5923759/2596cc3a-a656-11e4-8397-b9296a39001c.png)
+
 # Why PEPS?
 
 PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox, and innovate with new features.
