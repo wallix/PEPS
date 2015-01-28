@@ -3,6 +3,12 @@ PEPS = Email for Teams
 
 Innovative email and collaboration server with unique social features.
 
+![Messages View](https://cloud.githubusercontent.com/assets/817369/5923743/09105572-a656-11e4-9305-eb2a2bc578ce.png)
+
+![Dashboard View](https://cloud.githubusercontent.com/assets/817369/5923753/1a5dfd20-a656-11e4-959f-f19d9df12c0e.png)
+
+![Files View](https://cloud.githubusercontent.com/assets/817369/5923759/2596cc3a-a656-11e4-8397-b9296a39001c.png)
+
 # Why PEPS?
 
 PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox, and innovate with new features.
@@ -66,19 +72,18 @@ with the exim configuration files.
 
 ## PEPS Configuration
 
-You should now be able to run the PEPS server and connect to it, you then need to:
+You should now be able to run the PEPS server at `https://YOUR_DOMAIN_NAME` and connect to it, you then need to:
 
-1. Log in as "admin" user with the "admin" password
+1. Set up the 'admin' password at first launch and accept the license
 2. Go to the administration tab (wheels icon)
-3. Change domain name, and activate license by clicking on "Activate"
-4. Create users, teams, etc.
+3. Create users, teams, and you're set!
 
 # Documentation
 
 Manuals for both users and admins are available in form of the PEPS wiki:
 
 - [User Manual](http://github.com/MLstate/PEPS/wiki/User-Manual)
-- [Admin Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
+- [Admin/Operator Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
 - [Developer Manual](http://github.com/MLstate/PEPS/wiki/Developer-Manual)
 
 # Twitter contacts

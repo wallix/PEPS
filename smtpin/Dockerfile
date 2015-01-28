@@ -22,9 +22,11 @@ RUN haraka -i /usr/local/haraka
 
 # Configure domain name
 ADD ./domain /usr/local/haraka/config/host_list
+
 # Configure plugins
 ADD ./plugins/package.json /usr/local/haraka/package.json
 ADD ./plugins/smtpin.js /usr/local/haraka/plugins/smtpin.js
+
 # CHECK: required?
 ADD ./config/smtp.ini /usr/local/haraka/config/
 ADD ./config/plugins /usr/local/haraka/config/plugins

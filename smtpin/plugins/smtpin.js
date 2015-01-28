@@ -1,6 +1,5 @@
 // SMTP in plugin for PEPS
-// All rights reserved
-// (c) MLstate, 2015
+// Copyright (c) MLstate, 2015
 //
 // Contains code from https://github.com/jplock/haraka-http-forward
 // Copyright (c) 2013 Justin Plock
@@ -26,7 +25,7 @@ var host, domain;
 exports.register = function () {
     var config = this.config.get('/usr/local/haraka/config/smtpin.ini');
     if (config.main.host) {
-        // TODO: IPv6
+        // check validity
         var match = /^([^: ]+)(?::(\d+))?$/.exec(config.main.host);
         if (match) {
             host = config.main.host;
@@ -37,19 +36,13 @@ exports.register = function () {
                     } else { throw new Error('could not get domain from ' + host); }
                 }
             );
-        }
+        } else { throw new Error('could not parse host value: ' + config.main.host) }
     } else { throw new Error('configuration file missing') }
 };
 
-// // enable mail body parsing
-// exports.hook_data = function (next, connection) {
-//     connection.transaction.parse_body = 1;
-//     return next();
-// };
-
 exports.hook_data_post = function (next, connection) {
     var transaction = connection.transaction;
-    // TODO: check that recipients (transaction.rcpt_to) domain name?
+    // TODO: check that recipients (transaction.rcpt_to) matches domain name?
     var options = {
         'uri': 'http://' + host,
         'headers': {
@@ -63,11 +56,10 @@ exports.hook_data_post = function (next, connection) {
 
     var forward = request.post(options);
     forward.on('error', function (err) {
-        connection.logerror('Unable to connect to ' + host);
-        return next(err);
+        connection.logerror('unable to connect to ' + host + ' (' + err + ')');
+        return next();
     });
     forward.on('end', function () {
-        connection.logdebug('end event');
         return next();
     });
 

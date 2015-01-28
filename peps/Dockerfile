@@ -33,7 +33,7 @@ VOLUME ["/etc/peps"]
 # ADD ../domain /etc/peps/domain
 
 # FIXME: SMTP out
-EXPOSE 25
+# EXPOSE 25
 EXPOSE 443
 # SMTP in port
 EXPOSE 8999
