@@ -57,7 +57,7 @@ make rm
 
 PEPS runs by default using HTTPS.
 The only major pre-requisites are that you should have installed
-server.crt and server.key in the `$(PEPS_DATA)` directory (by default `/data/peps`).
+server.crt and server.key in the `$(PEPS_ETC)` directory (by default `/etc/peps`) which is shared by several containers.
 If you want to start quickly with a self-signed certificate, type:
 
 ```sh
