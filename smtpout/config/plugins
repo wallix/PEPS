@@ -7,6 +7,9 @@
 # block mails from known bad hosts (see config/dnsbl.zones for the DNS zones queried)
 # dnsbl
 
+# Relay messages
+smtpout
+
 # Check mail headers are valid
 data.headers
 
@@ -16,8 +19,3 @@ data.headers
 # Disconnect client if they spew bad SMTP commands at us
 max_unrecognized_commands
 
-# Necessary for outbound emails
-auth/flat_file
-
-# Enable TLS
-tls
