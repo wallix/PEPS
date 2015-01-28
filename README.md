@@ -13,6 +13,8 @@ Innovative email and collaboration server with unique social features.
 
 PEPS is an email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox, and innovate with new features.
 
+PEPS is built to be extensible thanks to complete APIs and we aim at creating an ecosystem of compatible apps and services.
+
 Please read more [about PEPS](http://github.com/MLstate/PEPS/wiki/About) and its [roadmap](http://github.com/MLstate/PEPS/wiki/Roadmap). We also have a [FAQ](http://github.com/MLstate/PEPS/wiki/FAQ).
 
 # Installation guide
