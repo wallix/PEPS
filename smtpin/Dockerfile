@@ -38,7 +38,7 @@ ADD haraka.sh /etc/service/haraka/run
 
 EXPOSE 25
 # TODO: key + dual port
-EXPOSE 587
+# EXPOSE 587
 
 # Start the init daemon - runit will launch the Haraka process
 CMD ["/sbin/my_init"]
