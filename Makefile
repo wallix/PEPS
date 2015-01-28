@@ -72,3 +72,6 @@ kill:
 
 rm:
 	docker rm peps_smtpin peps_server peps_mongod peps_solr peps_smtpout
+
+rmi:
+	docker rmi  $(docker images | awk 'NR>1 {print $3}')

@@ -2,16 +2,19 @@
 
 # control which IPs, rDNS hostnames, HELO hostnames, MAIL FROM addresses, and
 # RCPT TO address you accept mail from. See 'haraka -h access'.
-access
+# access
 
 # block mails from known bad hosts (see config/dnsbl.zones for the DNS zones queried)
-dnsbl
+# dnsbl
 
 # Check mail headers are valid
 data.headers
 
 # block mail from some known bad HELOs - see config/helo.checks.ini for configuration
-helo.checks
+# helo.checks
 
 # Disconnect client if they spew bad SMTP commands at us
 max_unrecognized_commands
+
+# Necessary for outbound emails
+auth/flat_file

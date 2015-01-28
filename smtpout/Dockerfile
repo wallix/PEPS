@@ -22,6 +22,7 @@ ADD ./domain /usr/local/haraka/config/host_list
 
 # Configure plugins
 ADD ./config/plugins /usr/local/haraka/config/plugins
+ADD ./config/auth_flat_file.ini /usr/local/haraka/config/auth_flat_file.ini
 RUN cd /usr/local/haraka && npm install
 
 # Create haraka runit service
