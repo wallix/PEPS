@@ -31,3 +31,6 @@ tls
 
 # PEPS SMTP in plugin
 smtpin
+
+# Queue inbound messages
+test_queue
