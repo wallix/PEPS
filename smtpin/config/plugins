@@ -26,5 +26,8 @@ max_unrecognized_commands
 # NOTE: THIS IS REQUIRED for inbound email.
 rcpt_to.in_host_list
 
+# Enable TLS
+tls
+
 # PEPS SMTP in plugin
 smtpin

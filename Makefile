@@ -56,10 +56,11 @@ data_init:
 run: data_init install_cert
 	$(DOCKER_DAEMON) --name peps_mongod -v $(MONGO_DATA):/data/db:rw mongod
 	$(DOCKER_DAEMON) --name peps_solr -v $(SOLR_DATA):/solr_data:rw solr
-	$(DOCKER_DAEMON) --name peps_server -p $(HTTPS_PORT):$(HTTPS_PORT) -v $(PEPS_ETC):/etc/peps:ro --link=peps_mongod:mongod --link=peps_solr:solr peps
+	$(DOCKER_DAEMON) --name peps_server -p 2525:$(SMTP_PORT) -p $(HTTPS_PORT):$(HTTPS_PORT) -v $(PEPS_ETC):/etc/peps:ro --link=peps_mongod:mongod --link=peps_solr:solr peps
 	$(DOCKER_DAEMON) --name peps_smtpin -p $(SMTP_PORT):$(SMTP_PORT) -v $(PEPS_ETC):/etc/peps:ro -p $(SMTPS_PORT):$(SMTPS_PORT) --link peps_server:peps smtpin
 	$(DOCKER_DAEMON) --name peps_smtpout -p $(SMTPSBIS_PORT):$(SMTPSBIS_PORT) -v $(PEPS_ETC):/etc/peps:ro --link peps_server:peps smtpout
-	@echo Now open your browser and log in to https://$(HOSTNAME) to set up the admin password
+	@echo Now open your browser and log in to https://$(HOSTNAME)
+	@echo At first launch, you will set up your admin password
 
 start:
 	docker start peps_mongod peps_solr peps_smtpout peps_server peps_smtpin
