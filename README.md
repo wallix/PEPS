@@ -62,10 +62,11 @@ If you want to start quickly with a self-signed certificate, type:
 
 ```sh
 make certificate
-make install_cert
 ```
 
-or copy your domain certificates to `$(PEPS_DATA)` manually before running the containers with `make run`.
+before running `make run`.
+
+Note that the same certificates are used for the HTTPS server and the SMTPS services.
 
 <!--  and you
 should initialise the $(EXIMIN_DATA) and $(EXIMOUT_DATA) directories
