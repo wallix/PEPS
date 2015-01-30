@@ -78,8 +78,8 @@ with the exim configuration files.
 You should now be able to run the PEPS server at `https://YOUR_DOMAIN_NAME` and connect to it, you then need to:
 
 1. Set up the 'admin' password at first launch and accept the license
-2. Go to the administration tab (wheels icon)
-3. Create users, teams, and you're set!
+2. Go to the "Users" tab in the topbar
+3. Create users, teams, and go!
 
 # Documentation
 
