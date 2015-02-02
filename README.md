@@ -1,7 +1,7 @@
 PEPS = Email for Teams
 ====
 
-Innovative email and collaboration server with unique social features.
+Innovative open source email and collaboration server with unique social features.
 
 ![Messages View](https://cloud.githubusercontent.com/assets/817369/5923743/09105572-a656-11e4-9305-eb2a2bc578ce.png)
 
@@ -16,6 +16,8 @@ PEPS is an email, file sharing and collaboration server that intends to fullfil 
 PEPS is built to be extensible thanks to complete APIs and we aim at creating an ecosystem of compatible apps and services.
 
 Please read more [about PEPS](http://github.com/MLstate/PEPS/wiki/About) and its [roadmap](http://github.com/MLstate/PEPS/wiki/Roadmap). We also have a [FAQ](http://github.com/MLstate/PEPS/wiki/FAQ).
+
+PEPS source code will be available from a [separate repository](https://github.com/MLstate/PEPS-source) under the Affero GPL License.
 
 # Installation guide
 
