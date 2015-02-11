@@ -11,6 +11,7 @@ File sharing |
 Newsfeed |
 Client-side encryption |
 New internal message protocol |
+Extensible |
 RESTful APIs |
 Powered by Node.js |
 Data in MongoDB |
