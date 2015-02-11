@@ -3,6 +3,19 @@ PEPS = Email for Teams
 
 Innovative open source email and collaboration server with unique social features.
 
+Main Features  | 
+------------- | 
+Clean UX/UI |
+Messages  | 
+File sharing |
+Newsfeed |
+Client-side encryption |
+New internal message protocol |
+RESTful APIs |
+Powered by Node.js |
+Data in MongoDB |
+Open Source |
+
 ![Messages View](https://cloud.githubusercontent.com/assets/817369/5923743/09105572-a656-11e4-9305-eb2a2bc578ce.png)
 
 ![Dashboard View](https://cloud.githubusercontent.com/assets/817369/5923753/1a5dfd20-a656-11e4-959f-f19d9df12c0e.png)
