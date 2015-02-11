@@ -95,4 +95,4 @@ Manuals for both users and admins are available in form of the PEPS wiki:
 
 - Project created by [@henri_opa](https://twitter.com/henri_opa) at [MLstate](http://mlstate.com)
 - Design/UX: [@tweetfr](https://twitter.com/tweetfr)
-- Lead developer: [@hchataing](https://twitter.com/hchataing)
+- Main developers: [henrichataing](https://github.com/henrichataing), [Aqua-Ye](https://github.com/Aqua-Ye), [cedricss](https://github.com/cedricss), [matbd](https://github.com/matbd), [nrs135](https://github.com/nrs135)
