@@ -22,9 +22,6 @@ RUN /usr/bin/npm install -g \
   html-to-text \
   tweetnacl
 
-# Patch the rai.js node module
-RUN cd /usr/local/lib/node_modules/rai/lib; patch rai.js < /peps/rai.patch
-
 # We need to add the webmail modules to the node path
 ENV NODE_PATH $NODE_PATH:/peps/_build
 
