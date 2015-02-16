@@ -31,7 +31,7 @@ PEPS is built to be extensible thanks to complete APIs and we aim at creating an
 
 Please read more [about PEPS](http://github.com/MLstate/PEPS/wiki/About) and its [roadmap](http://github.com/MLstate/PEPS/wiki/Roadmap). We also have a [FAQ](http://github.com/MLstate/PEPS/wiki/FAQ).
 
-PEPS source code will be available from a [separate repository](https://github.com/MLstate/PEPS-source) under the Affero GPL License.
+PEPS source is available from a [separate repository](https://github.com/MLstate/PEPS-source) under the Affero GPL License.
 
 # Installation guide
 
