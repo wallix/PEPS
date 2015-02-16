@@ -1,4 +1,4 @@
-PEPS = Email for Teams
+PEPS = open source email for teams
 ====
 
 Innovative open source email and collaboration server with unique social features.
