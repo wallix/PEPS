@@ -73,3 +73,10 @@ kill:
 
 rm:
 	docker rm peps_smtpin peps_server peps_mongod peps_solr peps_smtpout
+
+rmi_peps:
+	docker rmi peps
+
+# Update the peps_server container
+update: stop rm rmi_peps build run
+
