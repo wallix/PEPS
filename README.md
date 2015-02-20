@@ -94,7 +94,7 @@ with the exim configuration files.
 You should now be able to run the PEPS server at `https://YOUR_DOMAIN_NAME` and connect to it, you then need to:
 
 1. Set up the 'admin' password at first launch and accept the license
-2. Go to the "Users" tab in the topbar
+2. Head to the "Users" tab in the topbar
 3. Create users, teams, and go!
 
 # Documentation
@@ -102,11 +102,12 @@ You should now be able to run the PEPS server at `https://YOUR_DOMAIN_NAME` and 
 Manuals for both users and admins are available in form of the PEPS wiki:
 
 - [User Manual](http://github.com/MLstate/PEPS/wiki/User-Manual)
-- [Admin/Operator Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
+- [Admin Manual](http://github.com/MLstate/PEPS/wiki/Admin-Manual)
 - [Developer Manual](http://github.com/MLstate/PEPS/wiki/Developer-Manual)
+- [Operator Manual](https://github.com/MLstate/PEPS/wiki/Operator-Manual)
 
 # Twitter contacts
 
 - Project created by [@henri_opa](https://twitter.com/henri_opa) at [MLstate](http://mlstate.com)
-- Design/UX: [@tweetfr](https://twitter.com/tweetfr)
+- Design/UX by [@tweetfr](https://twitter.com/tweetfr)
 - Main developers: [henrichataing](https://github.com/henrichataing), [Aqua-Ye](https://github.com/Aqua-Ye), [cedricss](https://github.com/cedricss), [matbd](https://github.com/matbd), [nrs135](https://github.com/nrs135)
