@@ -35,8 +35,9 @@ PEPS source is available from a [separate repository](https://github.com/MLstate
 
 # Installation guide
 
-The deployment of PEPS is using [Docker](http://docker.io) to simplify the installation process.
-This quick guide covers the deployment of a single server, which you should have up and running in 30 minutes.
+The deployment of a single PEPS server is made easy with [Docker](http://docker.io).
+You should have your server up and running in 30 minutes.
+PEPS uses technologies that can scale up, but this will require some more work or you can [contact our company](mailto:contact@mlstate.com). 
 
 ## Docker containers
 
