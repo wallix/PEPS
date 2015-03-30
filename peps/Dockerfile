@@ -20,7 +20,8 @@ RUN /usr/bin/npm install -g \
   nodemailer-smtp-transport \
   mailparser \
   html-to-text \
-  tweetnacl
+  tweetnacl \
+  intl-messageformat intl
 
 # We need to add the webmail modules to the node path
 ENV NODE_PATH $NODE_PATH:/peps/_build
