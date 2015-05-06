@@ -1,7 +1,7 @@
 PEPS
 ====
 
-Innovative open source email and collaboration server with unique social features.
+Innovative open source email and collaboration server with transparent **end-to-end encryption**.
 
 Main Features  | 
 ------------- | 
