@@ -17,11 +17,11 @@ Powered by Node.js |
 Data in MongoDB |
 Open Source |
 
-![Messages View](https://cloud.githubusercontent.com/assets/817369/5923743/09105572-a656-11e4-9305-eb2a2bc578ce.png)
+![Messages View](https://cloud.githubusercontent.com/assets/817369/7520629/53915714-f4e8-11e4-8ad5-26065cdd9675.png)
 
-![Dashboard View](https://cloud.githubusercontent.com/assets/817369/7347671/36c0ef0a-eceb-11e4-8b61-97653f1897eb.png)
+![Dashboard View](https://cloud.githubusercontent.com/assets/817369/7517481/948ebf94-f4d5-11e4-98eb-06db45335a19.png)
 
-![Files View](https://cloud.githubusercontent.com/assets/817369/5923759/2596cc3a-a656-11e4-8397-b9296a39001c.png)
+![Files View](https://cloud.githubusercontent.com/assets/817369/7517512/c5f4153e-f4d5-11e4-8dd1-8e5c8e78f47a.png)
 
 # Why PEPS?
 
