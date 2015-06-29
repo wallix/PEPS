@@ -42,7 +42,7 @@ PEPS uses technologies that can scale up, but this will require some more work o
 
 ## Docker containers
 
-First install Docker on your server. If you are new to Docker, you can use Docker-ready linux instances at [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-and-file-storage-with-peps-on-ubuntu-14-04) or similar services. We recommend to have at least 2 Gb RAM in your PEPS instance.
+First install Docker on your server. If you are new to Docker, you can use Docker-ready linux instances at [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-and-file-storage-with-peps-on-ubuntu-14-04) or similar services. **You must have at least 2 Gb RAM for your PEPS instance**.
 
 To build the Docker containers and run on a Docker instance, just type:
 
