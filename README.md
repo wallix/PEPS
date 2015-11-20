@@ -26,6 +26,8 @@ Open Source |
 This open source portal enables you to download and install PEPS on your own server.
 To get generic information on PEPS, go to [PEPS website](http://peps.in).
 
+The project is active as of November 2015 and our goal is to stabilize Peps as a priority.
+
 # Why PEPS?
 
 PEPS is an open source email, file sharing and collaboration server that intends to fullfil the need for high-quality on-premises software that could rival with top-notch SaaS products such as Gmail or Dropbox, and innovate with new features.
