@@ -24,10 +24,14 @@ max_unrecognized_commands
 
 # Only accept mail for your personal list of hosts. Edit config/host_list
 # NOTE: THIS IS REQUIRED for inbound email.
+testrcpt
+
 rcpt_to.in_host_list
 
+
+
 # Enable TLS
-tls
+# tls
 
 # PEPS SMTP in plugin
 smtpin

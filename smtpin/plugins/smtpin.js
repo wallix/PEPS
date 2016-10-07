@@ -23,6 +23,7 @@ var request = require('request');
 var host, domain;
 
 exports.register = function () {
+    this.loginfo("In register");
     var config = this.config.get('/usr/local/haraka/config/smtpin.ini');
     if (config.main.host) {
         // check validity
@@ -41,6 +42,7 @@ exports.register = function () {
 };
 
 exports.hook_data_post = function (next, connection) {
+  this.loginfo("In hook");
     var transaction = connection.transaction;
     // TODO: check that recipients (transaction.rcpt_to) matches domain name?
     var options = {

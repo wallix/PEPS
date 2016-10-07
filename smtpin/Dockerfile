@@ -10,9 +10,9 @@ ADD ./domain /usr/local/haraka/config/host_list
 EXPOSE 25
 
 # Configurations
-COPY ./config /usr/local/haraka/
+COPY ./config /usr/local/haraka/config
 # Plugins
-COPY ./plugins /usr/local/haraka/
+COPY ./plugins /usr/local/haraka/plugins
 
 # Install plugin dependencies
 WORKDIR /usr/local/haraka
