@@ -1,8 +1,0 @@
-{
-    "name": "smtpin_local",
-    "description": "PEPS SMTP inbound plugin",
-    "version": "1.0.0",
-    "dependencies": {
-        "request": "2.26.0"
-    }
-}
