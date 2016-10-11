@@ -4,25 +4,23 @@ FROM node:6.7
 RUN npm install -g Haraka
 RUN haraka -i /usr/local/haraka
 
-# Configure domain
-ADD ./domain /usr/local/haraka/config/host_list
+# Copy package.json for plugin dependencies
+COPY ./package.json /usr/local/haraka
 
-EXPOSE 25
+# Install plugin dependencies
+WORKDIR /usr/local/haraka
+RUN npm install
+
+# Configure domain
+COPY ./domain /usr/local/haraka/config/host_list
 
 # Configurations
 COPY ./config /usr/local/haraka/config
 # Plugins
 COPY ./plugins /usr/local/haraka/plugins
 
-# Install plugin dependencies
-WORKDIR /usr/local/haraka
-RUN npm install
-
 # Mount /etc/peps for TLS certificates
 VOLUME ["/etc/peps"]
-
-# Configure domain name
-COPY ./domain /usr/local/haraka/config/host_list
 
 # Copy start script
 COPY ./haraka.sh /
