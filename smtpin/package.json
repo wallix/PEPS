@@ -1,0 +1,8 @@
+{
+  "name": "haraka_smtpin",
+  "version": "1.0.0",
+  "description": "PEPS SMTP inbound",
+  "dependencies": {
+    "request": "^2.75.0"
+  }
+}
