@@ -1,0 +1,7 @@
+{
+  "name": "haraka_smtpout",
+  "version": "1.0.0",
+  "description": "PEPS SMTP outbound",
+  "dependencies": {
+  }
+}
