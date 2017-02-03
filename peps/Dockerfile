@@ -14,14 +14,14 @@ RUN /usr/bin/npm install -g \
   ursa \
   simplesmtp \
   rai \
-  nodemailer \
+  nodemailer@2.7.2 \
   ldapjs \
   iconv \
-  nodemailer-smtp-transport \
-  mailparser \
+  nodemailer-smtp-transport@2.7.2 \
+  mailparser@0.6.2 \
   html-to-text \
   tweetnacl@0.13.3 \
-  intl-messageformat intl
+  intl-messageformat intl@0.1.4
 
 # We need to add the webmail modules to the node path
 ENV NODE_PATH $NODE_PATH:/peps/_build
