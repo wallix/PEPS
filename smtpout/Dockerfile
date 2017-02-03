@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y -q install nodejs
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Haraka
-RUN npm install -g Haraka
+RUN npm install -g Haraka@1.4.0
 RUN haraka -i /usr/local/haraka
 
 # Configure domain
