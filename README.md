@@ -1,7 +1,9 @@
+**Warning: This version is not maintained! However, we are working on a next version that will be released in June 2017**
+
 PEPS
 ====
 
-Innovative open source email and collaboration server with transparent **end-to-end encryption**.
+Innovative open source email and collaboration server with transparent end-to-end encryption.
 
 Main Features  | 
 ------------- | 
