@@ -1,9 +1,11 @@
-**Warning: This version is not maintained! However, we are working on a next version that will be released in June 2017**
+**Warning: This version is not maintained! However, we are working on a next version that will be released in 2017**
+
+The content below is kept as a reference, please do not use the following code and project.
 
 PEPS
 ====
 
-Innovative open source email and collaboration server with transparent end-to-end encryption.
+PEPS was an innovative open source email and collaboration server.
 
 Main Features  | 
 ------------- | 
@@ -19,16 +21,19 @@ Powered by Node.js |
 Data in MongoDB |
 Open Source |
 
+<!--
 ![Messages View](https://cloud.githubusercontent.com/assets/817369/7520629/53915714-f4e8-11e4-8ad5-26065cdd9675.png)
 
 ![Dashboard View](https://cloud.githubusercontent.com/assets/817369/7517481/948ebf94-f4d5-11e4-98eb-06db45335a19.png)
 
 ![Files View](https://cloud.githubusercontent.com/assets/817369/7517512/c5f4153e-f4d5-11e4-8dd1-8e5c8e78f47a.png)
+-->
 
 This open source portal enables you to download and install PEPS on your own server.
-To get generic information on PEPS, go to [PEPS website](http://peps.in).
+<!--To get generic information on PEPS, go to [PEPS website](http://peps.in).
 
 The project is active as of November 2015 and our goal is to stabilize Peps as a priority.
+-->
 
 # Why PEPS?
 
