@@ -1,4 +1,5 @@
-**Warning: This version is not maintained! However, we are working on a next version that will be released in 2017**
+**Warning: This product is not maintained!**
+**Following the acquisition of MLstate by WALLIX, the core technology of PEPS has become [DataPeps](https://datapeps.com), a generic E2EE framework that can be integrated in any application.**
 
 The content below is kept as a reference, please do not use the following code and project.
 
