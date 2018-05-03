@@ -20,29 +20,55 @@
 // THE SOFTWARE.
 
 var request = require('request');
+var stream = require('stream');
+
+// While debugging uncomment this and put "LOGDEBUG" in the file "loglevel"
+// request.debug = true;
+
 var host, domain;
 
-exports.register = function () {
+exports.register = function() {
+    this.loginfo("In register");
     var config = this.config.get('/usr/local/haraka/config/smtpin.ini');
     if (config.main.host) {
         // check validity
         var match = /^([^: ]+)(?::(\d+))?$/.exec(config.main.host);
         if (match) {
-            host = config.main.host;
+            host = config.main.host; //peps:8999
             request('http://' + host + '/domain',
-                function (error, response, body) {
+                function(error, response, body) {
                     if (!error && response.statusCode == 200) {
                         domain = body;
-                    } else { throw new Error('could not get domain from ' + host); }
+                    } else {
+                        throw new Error('could not get domain from ' + host);
+                    }
                 }
             );
-        } else { throw new Error('could not parse host value: ' + config.main.host) }
-    } else { throw new Error('configuration file missing') }
+        } else {
+            throw new Error('could not parse host value: ' + config.main.host);
+        }
+    } else {
+        throw new Error('configuration file missing');
+    }
 };
 
-exports.hook_data_post = function (next, connection) {
+exports.hook_data_post = function(next, connection) {
+    // For logging inside functions
+    var self = this;
+
     var transaction = connection.transaction;
     // TODO: check that recipients (transaction.rcpt_to) matches domain name?
+
+    //  transaction.message_stream is not a ReadableStream but a MessageStream
+    //  so request doesn't read from it directly. It's needed to put a passThrough
+    //  stream to be written by the message stream and read by request
+    var passThrough = new stream.PassThrough();
+
+    // Give the passThrough stream to the message stream
+    transaction.message_stream.pipe(passThrough);
+
+    // Options for request including the passThrough stream that will contain
+    // the message (with message headers as "To:" and "From:" included)
     var options = {
         'uri': 'http://' + host,
         'headers': {
@@ -51,18 +77,18 @@ exports.hook_data_post = function (next, connection) {
         'method': 'post',
         'timeout': 1000,
         'pool': false,
-        'jar': false
+        'jar': false,
+        'body': passThrough
     };
 
-    var forward = request.post(options);
-    forward.on('error', function (err) {
-        connection.logerror('unable to connect to ' + host + ' (' + err + ')');
+    // Send the post request to PEPS and continue the Haraka flow using next()
+    request.post(options, function(error, response, body) {
+        if (error) {
+            self.logerror('request error:' + JSON.stringify(error));
+            connection.logerror('unable to connect to ' + host + ' (' + error + ')');
+        } else {
+            self.loginfo('request with email sent');
+        }
         return next();
     });
-    forward.on('end', function () {
-        return next();
-    });
-
-    var pipe_options = {'dot_stuffing': true, 'ending_dot': true};
-    transaction.message_stream.pipe(forward, pipe_options);
 };
