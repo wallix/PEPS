@@ -1,2 +1,5 @@
 domain
 scripts/python/config.py
+server.crt
+server.csr
+server.key*

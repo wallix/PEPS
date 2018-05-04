@@ -3,8 +3,6 @@
 # Based on our generic opa container which has mlstatelibs and node built in.
 FROM opa:latest
 
-MAINTAINER MLstate <contact@mlstate.com>
-
 # Download the peps executable
 RUN curl -sf -o /tmp/peps.zip -L https://github.com/MLstate/PEPS/releases/download/0.9.9/peps.zip
 RUN mkdir -p /peps && cd /peps && unzip -q /tmp/peps.zip

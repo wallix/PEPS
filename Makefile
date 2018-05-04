@@ -3,9 +3,10 @@
 
 HOSTNAME?=$(shell cat hostname)
 DOMAIN_NAME=$(shell cat domain)
-MONGO_DATA=/data/db
-SOLR_DATA=/data/solr
-PEPS_ETC=/etc/peps
+MONGO_DATA ?= /data/db
+SOLR_DATA ?= /data/solr
+# On MacOS, use /private/etc/peps to keep configuration in /etc
+PEPS_ETC ?= /etc/peps
 
 # Public ports
 HTTPS_PORT?=443
